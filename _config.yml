@@ -1,5 +1,6 @@
 # _config.yml
-title: Foam
+name: something
+title: null
 # All the plugins we will be installing now that we won't be using GitHub Pages
 plugins:
   - jekyll-katex  # optional
