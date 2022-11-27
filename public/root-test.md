@@ -1,6 +1,5 @@
 ---
 bibliography: [../myrefs.bib]
-output: pdf_document
 ---
 
 # Hello!
