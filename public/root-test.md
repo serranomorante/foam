@@ -1,3 +1,7 @@
+---
+bibliography: myrefs.bib
+---
+
 # Root test
 
 another test
