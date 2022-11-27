@@ -1,9 +1,8 @@
 ---
 bibliography: [../myrefs.bib]
-output: pdf_document
 ---
 
-# Hello!
+# Hello
 
 another test
 
