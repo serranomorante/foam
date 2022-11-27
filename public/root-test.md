@@ -14,6 +14,10 @@ Just testing image:
 
 test
 
+$$
+\int_{\Box}^{\Box} \int_{\Box}^{\Box} f(x, y) dx dy
+$$
+
 🤐
 
 ```mermaid
