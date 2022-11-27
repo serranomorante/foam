@@ -26,7 +26,7 @@ $$
 
 🤐
 
-This is a test [@serranoMisMemorias2016]
+This is a test @serranoMisMemorias2016
 
 ```mermaid
 classDiagram
