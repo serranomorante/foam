@@ -1,7 +1,3 @@
----
-title: Root Test Title
----
-
 # Root test
 
 another test

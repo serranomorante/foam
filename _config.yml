@@ -1,5 +1,7 @@
 titles_from_headings:
-  strip_title: true
+  enabled:     true
+  strip_title: false
+  collections: false
 
 exclude:
   - pages/
