@@ -1,0 +1,19 @@
+# Ignore everything
+*
+
+# But not these files/folders
+!public/
+!public/**
+!public/**/*
+
+!_layouts/
+!_layouts/**
+!_layouts/**/*
+
+!assets/
+!assets/css/
+!assets/css/**
+!assets/css/**/*
+
+!_config.yml
+!.gitignore
