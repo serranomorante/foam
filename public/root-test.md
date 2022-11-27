@@ -14,6 +14,8 @@ Just testing image:
 
 test
 
+🤐
+
 ```mermaid
 classDiagram
     BrewController --|> TankListener
