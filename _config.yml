@@ -1,0 +1,13 @@
+titles_from_headings:
+  strip_title: true
+
+exclude:
+  - pages/
+  - books/
+  - college/
+  - docs/
+  - inbox/
+  - journal/
+  - learning/
+  - misc/
+  - work/
