@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<!-- Add katex support -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
 {% katexmm %} {{ content }} {% endkatexmm %}
@@ -24,3 +25,22 @@ layout: default
     }
   });
 </script>
+
+{%- if content contains 'mermaid' -%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+<script>
+  const config = {
+    startOnLoad: true,
+    theme: "default",
+    flowchart: {
+      useMaxWidth: false,
+      htmlLabels: true,
+    },
+  };
+  mermaid.initialize(config);
+  window.mermaid.init(
+    undefined,
+    document.querySelectorAll(".language-mermaid")
+  );
+</script>
+{% endif %}
