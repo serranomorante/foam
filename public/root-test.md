@@ -1,5 +1,5 @@
 ---
-bibliography: myrefs.bib
+bibliography: ../myrefs.bib
 ---
 
 # Root test
@@ -26,7 +26,7 @@ $$
 
 🤐
 
-@serranoMisMemorias2016
+This is a test []
 
 ```mermaid
 classDiagram
