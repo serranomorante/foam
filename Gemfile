@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 gem "jekyll"
+gem "pandoc-ruby"
 gem "kramdown-parser-gfm"
 gem "jekyll-theme-primer"
 gem "jekyll-optional-front-matter"
