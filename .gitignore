@@ -18,3 +18,5 @@
 !_config.yml
 !.gitignore
 !Gemfile
+!package.json
+!setup.sh
