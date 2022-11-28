@@ -11,7 +11,7 @@ mkdir pandoc
 wget -qO- https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-linux-amd64.tar.gz | \
    tar xvzf - --strip-components 1 -C ./pandoc
 ln -s ./pandoc/bin/pandoc /usr/bin/pandoc
-# export PATH="./pandoc/bin:$PATH"
+export PATH="./pandoc/bin:$PATH"
 echo "pandoc version -> $(pandoc --version)"
 # echo "which pandoc -> $(which pandoc)"
 # echo "pandoc path -> $PANDOC_PATH"
