@@ -1,5 +1,5 @@
 ---
-bibliography: [../myrefs.bib]
+bibliography: [myrefs.bib]
 ---
 
 # Hello
