@@ -1,6 +1,7 @@
 echo "Starting setup.sh..."
 
 yum install wget
+yum install xz
 wget https://downloads.haskell.org/~ghc/9.2.5/ghc-9.2.5-src.tar.xz
 tar xf ghc-9.2.5-src.tar.xz
 
