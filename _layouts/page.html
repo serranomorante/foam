@@ -33,13 +33,12 @@ layout: default
   document.querySelectorAll("pre.mermaid, pre>code.language-mermaid").forEach($el => {
     // if the second selector got a hit, reference the parent <pre>
     if ($el.tagName === "CODE") {
-      $el = $el.parentElement
+      // $el = $el.parentElement
+      $el.classList.add("language-mermaid");
     }
     // put the Mermaid contents in the expected <div class="mermaid">
     // plus keep the original contents in a nice <details>
-    console.log("content");
-    console.log($el.textContent);
-    $el.outerText = `<pre><code class="language-mermaid">${$el.textContent}</code></pre>`
+    $el.innerText = $el.textContent;
   })
 </script>
 
