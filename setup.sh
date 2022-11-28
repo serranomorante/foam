@@ -1,4 +1,4 @@
-echo "Starting setup.sh..."
+echo "### Starting setup.sh..."
 
 yum update
 yum -y install wget
@@ -16,3 +16,4 @@ yum install google-chrome-stable_current_x86_64.rpm
 npm install --global mermaid-filter
 
 echo "Which chrome -> $(which google-chrome)"
+echo "### Done."
