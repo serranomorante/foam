@@ -1,9 +1,14 @@
 echo "Starting setup.sh..."
 
 # install padoc and pandoc-citeproc
-yum install wget
-wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/petersen/pandoc/repo/epel-7/petersen-pandoc-epel-7.repo
-yum install -y pandoc pandoc-citeproc
+# yum install wget
+
+yum install curl
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+cabal install pandoc
+
+# wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/petersen/pandoc/repo/epel-7/petersen-pandoc-epel-7.repo
+# yum install -y pandoc pandoc-citeproc
 
 # pandoc filters
 npm install --global mermaid-filter
