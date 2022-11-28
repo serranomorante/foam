@@ -39,28 +39,28 @@ layout: default
     // plus keep the original contents in a nice <details>
     console.log("content");
     console.log($el.textContent);
-    $el.outerHTML = `<pre><code class="language-mermaid">${encodeURIComponent($el.textContent)}</code></pre>`
+    $el.innerText = `<pre><code class="language-mermaid">${$el.textContent}</code></pre>`
   })
 </script>
 
 <!-- Mermaid -->
 {%- if content contains 'mermaid' -%}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
-<script>
-  const config = {
-    startOnLoad: true,
-    logLevel: "error",
-    securityLevel: "loose",
-    theme: "default",
-    flowchart: {
-      useMaxWidth: false,
-      htmlLabels: true,
-    },
-  };
-  mermaid.initialize(config);
-  window.mermaid.init(
-    undefined,
-    document.querySelectorAll(".language-mermaid")
-  );
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+  <script>
+    const config = {
+      startOnLoad: true,
+      logLevel: "error",
+      securityLevel: "loose",
+      theme: "default",
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true,
+      },
+    };
+    mermaid.initialize(config);
+    window.mermaid.init(
+      undefined,
+      document.querySelectorAll(".language-mermaid")
+    );
+  </script>
 {% endif %}
