@@ -25,38 +25,3 @@ layout: default
     }
   });
 </script>
-
-<!-- Adapt pandoc mermaid code block -->
-<!-- <script type="text/javascript">
-  document.querySelectorAll("pre.mermaid > code", "pre.mermaid").forEach($el => {
-    if ($el.tagName === "PRE") {
-      $el.classList.remove("mermaid");
-    }
-
-    if ($el.tagName === "CODE") {
-      $el.classList.add("language-mermaid");
-    }
-  })
-</script> -->
-
-<!-- Render mermaid -->
-<!-- {%- if content contains 'mermaid' -%}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
-  <script>
-    const config = {
-      startOnLoad: true,
-      logLevel: "error",
-      securityLevel: "loose",
-      theme: "default",
-      flowchart: {
-        useMaxWidth: false,
-        htmlLabels: true,
-      },
-    };
-    mermaid.initialize(config);
-    window.mermaid.init(
-      undefined,
-      document.querySelectorAll(".language-mermaid")
-    );
-  </script>
-{% endif %} -->
