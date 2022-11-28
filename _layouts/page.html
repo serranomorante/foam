@@ -37,7 +37,7 @@ layout: default
     }
     // put the Mermaid contents in the expected <div class="mermaid">
     // plus keep the original contents in a nice <details>
-    $el.outerHTML = `<div class="mermaid">${$el.textContent}</div>`
+    $el.outerHTML = `<pre><code class="language-mermaid">${$el.textContent}</code></pre>`
   })
 </script>
 
