@@ -4,9 +4,9 @@ yum -y install wget
 # yum -y install xz
 
 # Install EPEL
-wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum install ./epel-release-latest-*.noarch.rpm
-yum install -y pandoc pandoc-citeproc
+wget https://copr-be.cloud.fedoraproject.org/results/petersen/pandoc/epel-7-x86_64/00976393-pandoc/pandoc-2.7.3-1.el7.x86_64.rpm
+yum install ./epel-7-x86_64*.noarch.rpm
+yum install -y pandoc
 
 # yum -y install xz
 
