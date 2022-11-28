@@ -36,8 +36,8 @@ layout: default
 </script> -->
 
 <!-- Render mermaid -->
-{%- if content contains 'mermaid' -%}
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+<!-- {%- if content contains 'mermaid' -%}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
   <script>
     const config = {
       startOnLoad: true,
@@ -54,9 +54,5 @@ layout: default
       undefined,
       document.querySelectorAll("pre.mermaid > code")
     );
-  </script> -->
-  <script type="module">
-    import mermaid from 'https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
   </script>
-{% endif %}
+{% endif %} -->
