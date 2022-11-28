@@ -1,7 +1,6 @@
 # Setting name and title fixes duplicated header issue
 name: serranomorante
 title: null
-markdown: Pandoc
 plugins:
   - jekyll-katex
   - jekyll-default-layout
@@ -9,15 +8,8 @@ plugins:
   - jekyll-readme-index
   - jekyll-titles-from-headings
   - jekyll-optional-front-matter
-  - jekyll-pandoc
 theme: jekyll-theme-primer
 # The GitHub repository that we are hosting our foam workspace from
 repository: serranomorante/foam
 # Generate permalinks in format specified in: https://jekyllrb.com/docs/permalinks/#built-in-formats
 permalink: pretty
-# pandoc:
-#   extensions:
-#     - normalize
-#     - smart
-#     - mathjax
-#     - bibliography: public/myrefs.bib
