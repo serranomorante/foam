@@ -1,3 +1,4 @@
+yum install wget
 wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/petersen/pandoc/repo/epel-7/petersen-pandoc-epel-7.repo
 yum install -y pandoc pandoc-citeproc
 
@@ -6,7 +7,6 @@ yum install -y pandoc pandoc-citeproc
 # yum install pandoc
 # yum install pandoc-citeproc
 
-# yum install wget
 # mkdir pandoc
 # wget -qO- https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-linux-amd64.tar.gz | \
 #    tar xvzf - --strip-components 1 -C ./pandoc
