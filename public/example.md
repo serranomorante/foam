@@ -22,6 +22,12 @@ $$
 
 This is taken from that excellent book [@citationDummyKey]
 
+## Table
+
+| Field | Value          |
+| ----- | -------------- |
+| Title | A simple table |
+
 ## Mermaid
 
 ### Class diagram
