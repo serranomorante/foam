@@ -20,3 +20,4 @@
 !Gemfile
 !package.json
 !setup.sh
+!.puppeteer.json
