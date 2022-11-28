@@ -6,3 +6,4 @@ export PATH="./pandoc/bin:$PATH"
 echo "which pandoc -> $(which pandoc)"
 echo 'pathmunge /vercel/path0/pandoc/bin' > /etc/profile.d/pndc.sh
 chmod +x /etc/profile.d/pndc.sh
+. /etc/profile
