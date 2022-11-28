@@ -27,7 +27,7 @@ layout: default
   });
 </script>
 
-<!-- {%- if content contains 'mermaid' -%}
+{%- if content contains 'mermaid' -%}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
 <script>
   const config = {
@@ -41,7 +41,7 @@ layout: default
   mermaid.initialize(config);
   window.mermaid.init(
     undefined,
-    document.querySelectorAll(".language-mermaid")
+    document.querySelectorAll(".mermaid")
   );
 </script>
-{% endif %} -->
+{% endif %}
