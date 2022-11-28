@@ -27,7 +27,7 @@ layout: default
 </script>
 
 <!-- Adapt pandoc mermaid code block -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   document.querySelectorAll("pre.mermaid > code", "pre.mermaid").forEach($el => {
     if ($el.tagName === "PRE") {
       $el.classList.remove("mermaid");
@@ -37,10 +37,10 @@ layout: default
       $el.classList.add("language-mermaid");
     }
   })
-</script>
+</script> -->
 
 <!-- Render mermaid -->
-{%- if content contains 'mermaid' -%}
+<!-- {%- if content contains 'mermaid' -%}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
   <script>
     const config = {
@@ -59,4 +59,4 @@ layout: default
       document.querySelectorAll(".language-mermaid")
     );
   </script>
-{% endif %}
+{% endif %} -->

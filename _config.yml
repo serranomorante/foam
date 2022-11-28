@@ -18,4 +18,5 @@ permalink: pretty
 pandoc:
   extensions:
     - mathjax
+    - filter: mermaid-filter
     - bibliography: public/myrefs.bib

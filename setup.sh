@@ -13,4 +13,4 @@ yum install google-chrome-stable_current_x86_64.rpm
 # yum install -y pandoc pandoc-citeproc
 
 # pandoc filters
-# npm install --global mermaid-filter
+npm install --global mermaid-filter
