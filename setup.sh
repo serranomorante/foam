@@ -6,8 +6,8 @@ export PATH="./pandoc/bin:$PATH"
 echo "pandoc version -> $(pandoc --version)"
 echo "which pandoc -> $(which pandoc)"
 echo "pandoc path -> $PANDOC_PATH"
-echo "path --> $PATH"
 echo "$(pwd)/pandoc/bin" > /etc/profile.d/pndc.sh
 chmod +x /etc/profile.d/pndc.sh
 . /etc/profile
 cat /etc/profile.d/pndc.sh
+echo "path --> $PATH"
