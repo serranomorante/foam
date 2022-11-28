@@ -1,3 +1,4 @@
+yum install epel-release
 yum install pandoc
 # yum install wget
 # mkdir pandoc
