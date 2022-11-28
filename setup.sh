@@ -1,17 +1,19 @@
-# yum makecache
-# yum -y install cabal-install
+yum makecache
+yum -y install cabal-install
+cabal update
+cabal install pandoc pandoc-citeproc
 
 # yum update
 # yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 # yum install pandoc
 # yum install pandoc-citeproc
 
-yum install wget
-mkdir pandoc
-wget -qO- https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-linux-amd64.tar.gz | \
-   tar xvzf - --strip-components 1 -C ./pandoc
-ln -s ./pandoc/bin/pandoc /usr/bin/pandoc
-export PATH="./pandoc/bin:$PATH"
+# yum install wget
+# mkdir pandoc
+# wget -qO- https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-linux-amd64.tar.gz | \
+#    tar xvzf - --strip-components 1 -C ./pandoc
+# ln -s ./pandoc/bin/pandoc /usr/bin/pandoc
+# export PATH="./pandoc/bin:$PATH"
 echo "pandoc version -> $(pandoc --version)"
 # echo "which pandoc -> $(which pandoc)"
 # echo "pandoc path -> $PANDOC_PATH"
