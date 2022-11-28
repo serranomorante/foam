@@ -28,11 +28,13 @@ layout: default
 
 <!-- Adapt pandoc mermaid code block -->
 <script type="text/javascript">
-  document.querySelectorAll("pre.mermaid > code", ".mermaid").forEach($el => {
+  document.querySelectorAll("pre.mermaid > code", "pre.mermaid").forEach($el => {
+    if ($el.tagName === "PRE") {
+      $el.classList.remove("mermaid");
+    }
+
     if ($el.tagName === "CODE") {
       $el.classList.add("language-mermaid");
-    } else {
-      $el.classList.remove("mermaid");
     }
   })
 </script>
