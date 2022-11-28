@@ -17,7 +17,7 @@ repository: serranomorante/foam
 permalink: pretty
 pandoc:
   extensions:
-    - normalize
-    - smart
+    # - normalize
+    # - smart
     - mathjax
     - citeproc
