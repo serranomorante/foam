@@ -1,33 +1,25 @@
 echo "Starting setup.sh..."
 
-# install padoc and pandoc-citeproc
-# yum install wget
+yum install wget
+yum install build-dep ghc
+wget https://downloads.haskell.org/~ghc/9.2.5/ghc-9.2.5-src.tar.xz
+tar xf ghc-9.2.5-src.tar.xz
 
-yum install curl
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-cabal install pandoc
+cd ghc-9.2.5
+./boot && ./configure
+hadrian/build -j
+cd ..
 
-# wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/petersen/pandoc/repo/epel-7/petersen-pandoc-epel-7.repo
-# yum install -y pandoc pandoc-citeproc
+# yum install -y which gmp-devel
+
+wget https://downloads.haskell.org/~cabal/cabal-install-3.8.1.0/cabal-install-3.8.1.0-x86_64-linux-deb10.tar.xz
+tar xf cabal-install-3.8.1.0-x86_64-linux-deb10.tar.xz
+ln -s cabal /usr/bin/cabal
+
+cabal update
+cabal install pandoc pandoc-citeproc
 
 # pandoc filters
 npm install --global mermaid-filter
 
-# yum update
-# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-# yum install pandoc
-# yum install pandoc-citeproc
-
-# mkdir pandoc
-# wget -qO- https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-linux-amd64.tar.gz | \
-#    tar xvzf - --strip-components 1 -C ./pandoc
-# ln -s ./pandoc/bin/pandoc /usr/bin/pandoc
-# export PATH="./pandoc/bin:$PATH"
 echo "pandoc version -> $(pandoc --version)"
-# echo "which pandoc -> $(which pandoc)"
-# echo "pandoc path -> $PANDOC_PATH"
-# echo "$(pwd)/pandoc/bin" > /etc/profile.d/pndc.sh
-# chmod +x /etc/profile.d/pndc.sh
-# . /etc/profile
-# cat /etc/profile.d/pndc.sh
-# echo "path --> $PATH"
