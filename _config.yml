@@ -15,9 +15,9 @@ theme: jekyll-theme-primer
 repository: serranomorante/foam
 # Generate permalinks in format specified in: https://jekyllrb.com/docs/permalinks/#built-in-formats
 permalink: pretty
-pandoc:
-  extensions:
-    - normalize
-    - smart
-    - mathjax
-    - bibliography: public/myrefs.bib
+# pandoc:
+#   extensions:
+#     - normalize
+#     - smart
+#     - mathjax
+#     - bibliography: public/myrefs.bib
