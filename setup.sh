@@ -10,10 +10,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 yum install pandoc-2.7.3-1.el7.x86_64.rpm
 yum install pandoc-citeproc-0.16.2-1.el7.x86_64.rpm
 yum install google-chrome-stable_current_x86_64.rpm
-# yum install -y pandoc pandoc-citeproc
 
 # pandoc filters
-npm install --global puppeteer
 npm install --global mermaid-filter
 
 echo "Which chrome -> $(which google-chrome)"
