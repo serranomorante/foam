@@ -26,6 +26,7 @@ layout: default
   });
 </script>
 
+<!-- Adapt  -->
 <!-- Thanks! https://css-tricks.com/making-mermaid-diagrams-in-markdown/ -->
 <script type="text/javascript">
   // select <pre class="mermaid"> _and_ <pre><code class="language-mermaid">
@@ -36,13 +37,7 @@ layout: default
     }
     // put the Mermaid contents in the expected <div class="mermaid">
     // plus keep the original contents in a nice <details>
-    $el.outerHTML = `
-      <div class="mermaid">${$el.textContent}</div>
-      <details>
-        <summary>Diagram source</summary>
-        <pre>${$el.textContent}</pre>
-      </details>
-    `
+    $el.outerHTML = `<div class="mermaid">${$el.textContent}</div>`
   })
 </script>
 
