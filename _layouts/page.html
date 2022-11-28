@@ -2,25 +2,16 @@
 layout: default
 ---
 
-{{ content }}
+<!-- Add katex support -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
-<script type="text/javascript">
-  // select <pre class="mermaid"> _and_ <pre><code class="language-mermaid">
-  document.querySelectorAll("pre.mermaid, pre>code.language-mermaid").forEach($el => {
-    // if the second selector got a hit, reference the parent <pre>
-    if ($el.tagName === "CODE")
-      $el = $el.parentElement
-    // put the Mermaid contents in the expected <div class="mermaid">
-    // plus keep the original contents in a nice <details>
-    $el.outerHTML = `
-      <div class="mermaid">${$el.textContent}</div>
-      <details>
-        <summary>Diagram source</summary>
-        <pre>${$el.textContent}</pre>
-      </details>
-    `
-  })
-</script>
+{% katexmm %} {{ content }} {% endkatexmm %}
+
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
 <script type="text/javascript">
   // Hack: Replace page-link with "Page Title"
@@ -34,3 +25,43 @@ layout: default
     }
   });
 </script>
+
+<!-- Thanks! https://css-tricks.com/making-mermaid-diagrams-in-markdown/ -->
+<script type="text/javascript">
+  // select <pre class="mermaid"> _and_ <pre><code class="language-mermaid">
+  document.querySelectorAll("pre.mermaid, pre>code.language-mermaid").forEach($el => {
+    // if the second selector got a hit, reference the parent <pre>
+    if ($el.tagName === "CODE") {
+      $el = $el.parentElement
+    }
+    // put the Mermaid contents in the expected <div class="mermaid">
+    // plus keep the original contents in a nice <details>
+    $el.outerHTML = `
+      <div class="mermaid">${$el.textContent}</div>
+      <details>
+        <summary>Diagram source</summary>
+        <pre>${$el.textContent}</pre>
+      </details>
+    `
+  })
+</script>
+
+<!-- Mermaid -->
+{%- if content contains 'mermaid' -%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+<script>
+  const config = {
+    startOnLoad: true,
+    theme: "default",
+    flowchart: {
+      useMaxWidth: false,
+      htmlLabels: true,
+    },
+  };
+  mermaid.initialize(config);
+  window.mermaid.init(
+    undefined,
+    document.querySelectorAll(".language-mermaid", ".mermaid")
+  );
+</script>
+{% endif %}
