@@ -26,21 +26,14 @@ layout: default
   });
 </script>
 
-<!-- Adapt  -->
-<!-- Thanks! https://css-tricks.com/making-mermaid-diagrams-in-markdown/ -->
-<!-- <script type="text/javascript">
-  // select <pre class="mermaid"> _and_ <pre><code class="language-mermaid">
-  document.querySelectorAll("pre.mermaid, pre>code.language-mermaid").forEach($el => {
-    // if the second selector got a hit, reference the parent <pre>
+<!-- Adapt pandoc mermaid code block -->
+<script type="text/javascript">
+  document.querySelectorAll("pre.mermaid > code").forEach($el => {
     if ($el.tagName === "CODE") {
-      // $el = $el.parentElement
       $el.classList.add("language-mermaid");
     }
-    // put the Mermaid contents in the expected <div class="mermaid">
-    // plus keep the original contents in a nice <details>
-    $el.innerText = $el.textContent;
   })
-</script> -->
+</script>
 
 <!-- Mermaid -->
 <!-- {%- if content contains 'mermaid' -%}
