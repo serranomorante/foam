@@ -48,41 +48,41 @@ classDiagram
         +PotEmptied()
     }
 
-    <<Interface>> TankListener
     class TankListener {
         +TankDry()
         +TankWet()
     }
+    <<Interface>> TankListener
 
-    <<Interface>> ButtonListener
     class ButtonListener {
         +ButtonPushed()
         +ButtonReleased()
     }
+    <<Interface>> ButtonListener
 
-    <<Interface>> PlateListener
     class PlateListener {
         +PotRemoved()
         +PotPartial()
         +PotEmptied()
     }
+    <<Interface>> PlateListener
 
-    <<Abstract>> StartStopController
     class StartStopController {
         +bool IsReady()
     }
+    <<Abstract>> StartStopController
 
-    <<Interface>> WaterSensor
     class WaterSensor {
         +bool HasWater()
     }
+    <<Interface>> WaterSensor
 
-    <<Interface>> PlateSensor
     class PlateSensor {
         +bool HasNoPot()
         +bool HasEmptyPot()
         +bool HasPartialPot()
     }
+    <<Interface>> PlateSensor
 ```
 
 ```mermaid
