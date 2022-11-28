@@ -18,5 +18,4 @@ permalink: pretty
 pandoc:
   extensions:
     - katex
-    - filter: mermaid-filter
     - bibliography: public/myrefs.bib
