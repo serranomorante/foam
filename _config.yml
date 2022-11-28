@@ -9,6 +9,7 @@ plugins:
   - jekyll-readme-index
   - jekyll-titles-from-headings
   - jekyll-optional-front-matter
+  - jekyll-pandoc
 theme: jekyll-theme-primer
 # The GitHub repository that we are hosting our foam workspace from
 repository: serranomorante/foam
@@ -19,5 +20,4 @@ pandoc:
     - normalize
     - smart
     - mathjax
-    # - csl: _styles/apa.csl
-    - bibliography: bibliography/references.bib
+    - bibliography: public/myrefs.bib
