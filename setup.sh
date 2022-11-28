@@ -14,3 +14,5 @@ yum install google-chrome-stable_current_x86_64.rpm
 
 # pandoc filters
 npm install --global mermaid-filter
+
+echo "Which chrome -> $(which chrome)"
