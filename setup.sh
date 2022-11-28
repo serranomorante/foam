@@ -13,6 +13,7 @@ yum install google-chrome-stable_current_x86_64.rpm
 # yum install -y pandoc pandoc-citeproc
 
 # pandoc filters
+npm install --global puppeteer
 npm install --global mermaid-filter
 
 echo "Which chrome -> $(which google-chrome)"
