@@ -1,7 +1,5 @@
-yum makecache
-yum -y install cabal-install
-cabal update
-cabal install pandoc pandoc-citeproc
+wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/petersen/pandoc/repo/epel-7/petersen-pandoc-epel-7.repo
+yum install -y pandoc pandoc-citeproc
 
 # yum update
 # yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
