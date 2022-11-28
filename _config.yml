@@ -1,6 +1,7 @@
 # Setting name and title fixes duplicated header issue
 name: serranomorante
 title: null
+markdown: Pandoc
 plugins:
   - jekyll-katex
   - jekyll-default-layout
@@ -13,3 +14,10 @@ theme: jekyll-theme-primer
 repository: serranomorante/foam
 # Generate permalinks in format specified in: https://jekyllrb.com/docs/permalinks/#built-in-formats
 permalink: pretty
+pandoc:
+  extensions:
+    - normalize
+    - smart
+    - mathjax
+    # - csl: _styles/apa.csl
+    - bibliography: bibliography/references.bib
