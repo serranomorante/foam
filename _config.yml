@@ -20,3 +20,4 @@ pandoc:
     - normalize
     - smart
     - mathjax
+    - citeproc
