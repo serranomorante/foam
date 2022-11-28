@@ -27,13 +27,13 @@ layout: default
 </script>
 
 <!-- Adapt pandoc mermaid code block -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   document.querySelectorAll("pre.mermaid > code").forEach($el => {
     if ($el.tagName === "CODE") {
       $el.classList.add("language-mermaid");
     }
   })
-</script>
+</script> -->
 
 <!-- Render mermaid -->
 {%- if content contains 'mermaid' -%}
@@ -52,7 +52,7 @@ layout: default
     mermaid.initialize(config);
     window.mermaid.init(
       undefined,
-      document.querySelectorAll(".language-mermaid")
+      document.querySelectorAll("pre.mermaid > code")
     );
   </script>
 {% endif %}
