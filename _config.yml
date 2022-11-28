@@ -17,4 +17,5 @@ repository: serranomorante/foam
 permalink: pretty
 pandoc:
   extensions:
+    - mathjax
     - bibliography: public/myrefs.bib
