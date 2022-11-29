@@ -6,20 +6,20 @@ Current [guides to publish your site](https://foambubble.github.io/foam/user/rec
 
 If you intend to use bibtex citations, right now Pandoc is the only tool capable of translating this syntax:
 
-~~~markdown
+```markdown
 As that famous author said [@citationDummyKey]
-~~~
+```
 
 Into this result:
 
-~~~markdown
+```markdown
 As that famous author said (AuthorLastName 2022)
 
 ...
 
 # References
 AuthorLastName, AuthorFirstName. 2022. *Book Title Here*. SampleEdition. SamplePublisher.
-~~~
+```
 
 **If you use mermaid diagrams**:
 
