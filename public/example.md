@@ -116,7 +116,7 @@ stateDiagram-v2
     }
 ```
 
-## Syntax highlight
+## Syntax highlighting
 
 ```python
 # python.py
@@ -144,6 +144,8 @@ class Hello {
 ```
 
 ```markdown
+<!-- Markdown -->
+
 # Title 1
 
 ## Title 2
