@@ -127,6 +127,30 @@ class Hello:
         pass
 ```
 
+```typescript
+// typescript
+
+class Hello {
+    greeting: string;
+
+    constructor(message: string) {
+        this.greeting = message;
+    }
+
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+```
+
+```markdown
+# Title 1
+
+## Title 2
+
+~~Testing **text**~~
+```
+
 ## References
 
 [^1]: This is the test of the footnote
