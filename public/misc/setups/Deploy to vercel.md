@@ -1,54 +1,53 @@
-# Different implementation for mermaid diagrams and bibtex citations
+# Use Pandoc as renderer for your markdown static site
 
-Current guides
+![[Demo](https://foam.serranomorante.com/public/example)](https://i.postimg.cc/vBmZQhQW/brave-20221128-203023-938.gif)
 
-~~Current implementation of mermaid diagrams for Vercel deployment its not static, which means javascript needs to load first before it start showing your diagrams.~~
+Current [guides to publish your site](https://foambubble.github.io/foam/user/recipes/recipes#publish) don't cover using **Pandoc** + **Jekyll** as the markdown renderer for your static site. Instead they use [Kramdown](https://jekyllrb.com/docs/configuration/markdown/#kramdown) + Jekyll as the default.
 
-I wrote this guide to provide an alternative solution for mermaid diagrams and in the process, leverage the power of pandoc to get bibtex citations to work and maybe some additional tweaks.
+If you intend to use bibtex citations, right now Pandoc is the only tool capable of translating this syntax:
+
+```markdown
+As that famous author said [@citationDummyKey]
+```
+
+Into this result:
+
+```markdown
+As that famous author said (AuthorLastName 2022)
+
+...
+
+# References
+AuthorLastName, AuthorFirstName. 2022. *Book Title Here*. SampleEdition. SamplePublisher.
+```
+
+**If you use mermaid diagrams**:
+
+Current [mermaid diagrams implementation](https://github.com/mermaid-js/mermaid/issues/772#issuecomment-449553808) on the web **is not static**, which means javascript needs to be loaded first before your diagrams start to showing up in the browser. This guide shows you an alternative to that approach.
+
+But mostly, I wrote this guide to provide a working example of how to use Pandoc + Jekyll deployed on Vercel so you can extend it from there by leveraging the powerful tool that Pandoc is.
+
+***
+
+**About rendering bibtex citations**:
+
+For a different approach to render your citations, check [this comment](https://github.com/foambubble/foam/issues/241#issuecomment-855418511). It still requires you to install Pandoc as a dependency although it doesn't use it as a renderer.
 
 ## Goals of this guide
 
-The following setup is not meant to suit every use case. This guide makes the following assumptions:
+This guide is NOT meant to be generic, there are specific constraints:
 
-1. You're deploying to vercel (I only refer to vercel as my environment).
-2. You use [bibtex](https://www.youtube.com/watch?v=JF9bvYmcdmY&list=LL&index=1&t=1s) to manage your citations.
-3. You are forced to have just 1 bibtex file.
-4. We use Jekyll as the static site generator.
-5. Your currently implementation of mermaid diagrams might stop working
-
-## What are we solving
-
-Foam has guides on how to render **math formulas** and **mermaid diagrams** from your published pages. But there's no guide yet on how to render your **bibtex citations**.
-
-1. **You want your published notes to properly render your bibtex citations**.
-
-    Example: You write `[@citationDummyKey]` inline on your markdown file and this will be translated into `(AuthorLastName 2022)` on your **published page**. Also it will be inserted into its own **References** section:
-
-    ```markdown
-    # References
-    AuthorLastName, AuthorFirstName. 2022. *Book Title Here*. SampleEdition. SamplePublisher.
-    ```
-
-2. **You want your published notes to properly render your math formulas**.
-3. **You want your published notes to properly render your mermaid diagrams**.
-
-## How we did it?
-
-Instead of [Kramdown](https://jekyllrb.com/docs/configuration/markdown/#kramdown), we use [Pandoc](https://pandoc.org/) as the markdown renderer.
-
-Pandoc has a concept of [filters](https://pandoc.org/filters.html) which lets you tweak the translation between an input and an output (`from: markdown -> to: html`).
-
-For a different approach, check [this comment](https://github.com/foambubble/foam/issues/241#issuecomment-855418511).
-
-## Benefits of this approach
-
-- Static generation of mermaid diagrams
+1. This guide only refers to deploying on Vercel
+2. This guide expects you to use [bibtex](https://www.youtube.com/watch?v=JF9bvYmcdmY&list=LL&index=1&t=1s) to manage your citations.
+3. Currently this guide expects you to have just 1 bibtex file.
+4. This guide is only for Pandoc + Jekyll.
+5. If you followed [this mermaid approach](https://github.com/mermaid-js/mermaid/issues/772#issuecomment-449553808) to render your diagrams. You need to replace it with the alternative described in this guide.
 
 ## What you need
 
 - pandoc
 - pandoc-citeproc
-- google-chrome (required for mermaid diagrams)
+- google-chrome (required to generate static mermaid diagrams)
 
 ## TODO
 
