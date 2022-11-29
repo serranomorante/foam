@@ -116,6 +116,17 @@ stateDiagram-v2
     }
 ```
 
+## Syntax highlight
+
+```python
+# python.py
+
+class Hello:
+    """This is a test class"""
+    def __init__(self) -> None:
+        pass
+```
+
 ## References
 
 [^1]: This is the test of the footnote
