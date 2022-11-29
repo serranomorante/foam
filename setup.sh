@@ -16,6 +16,6 @@ npm install --global mermaid-filter
 
 # syntax highlighting
 chmod +x ./extractcss.sh
-./extractcss pygments > ./assets/css/pygments.css
+./extractcss.sh pygments > ./assets/css/pygments.css
 
 echo "### Done."
