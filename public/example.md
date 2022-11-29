@@ -14,6 +14,10 @@ This is a footnote[^1] test.
 
 ## Math
 
+This is an inline example: $\int_{\Box}^{\Box} \int_{\Box}^{\Box} f(x, y) dx dy$
+
+And this is a block example:
+
 $$
 \int_{\Box}^{\Box} \int_{\Box}^{\Box} f(x, y) dx dy
 $$

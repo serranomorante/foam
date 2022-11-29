@@ -1,6 +1,8 @@
 # Different implementation for mermaid diagrams and bibtex citations
 
-Current implementation of mermaid diagrams for Vercel deployment its not static, which means javascript needs to load first before it start showing your diagrams.
+Current guides
+
+~~Current implementation of mermaid diagrams for Vercel deployment its not static, which means javascript needs to load first before it start showing your diagrams.~~
 
 I wrote this guide to provide an alternative solution for mermaid diagrams and in the process, leverage the power of pandoc to get bibtex citations to work and maybe some additional tweaks.
 
