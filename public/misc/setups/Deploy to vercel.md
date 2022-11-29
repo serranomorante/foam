@@ -52,3 +52,4 @@ This guide is NOT meant to be generic, there are specific constraints:
 ## TODO
 
 - [ ] Add environment variables from a configuration file instead of having to login to the vercel console.
+- [ ] Dynamically generate the syntax highlighting css file.
