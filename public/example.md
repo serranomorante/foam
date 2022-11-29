@@ -4,6 +4,27 @@ bibliography: [myrefs.bib]
 
 # Example
 
+## TOC
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Example](#example)
+  - [TOC](#toc)
+  - [Backlinks](#backlinks)
+  - [Footnotes](#footnotes)
+  - [Math](#math)
+  - [Citations](#citations)
+  - [Table](#table)
+  - [Mermaid](#mermaid)
+    - [Class diagram](#class-diagram)
+    - [State diagram](#state-diagram)
+  - [Syntax highlighting](#syntax-highlighting)
+  - [References](#references)
+
+<!-- /code_chunk_output -->
+
 ## Backlinks
 
 This is a [[backlink test]] and it should work.
@@ -14,7 +35,7 @@ This is a footnote[^1] test.
 
 ## Math
 
-This is an inline example: $\int_{\Box}^{\Box} \int_{\Box}^{\Box} f(x, y) dx dy$
+This is an inline math example: $\int_{\Box}^{\Box} \int_{\Box}^{\Box} f(x, y) dx dy$
 
 And this is a block example:
 
