@@ -14,14 +14,8 @@ yum install google-chrome-stable_current_x86_64.rpm
 # pandoc filters
 npm install --global mermaid-filter
 
-# print syntax highlighting css to the console
-# thanks! https://github.com/jgm/pandoc/issues/7860#issuecomment-1018696254
-style=${1:-pygments}
-tmp=
-trap 'rm -f "$tmp"' EXIT
-tmp=$(mktemp)
-echo '$highlighting-css$' > "$tmp"
-echo '`test`{.c}' | pandoc --highlight-style=$style --template=$tmp
+# syntax highlighting
+chmod +x ./extractcss.sh
+./extractcss pygments > ./assets/css/pygments.css
 
-echo "Which chrome -> $(which google-chrome)"
 echo "### Done."

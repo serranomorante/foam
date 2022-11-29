@@ -20,5 +20,6 @@
 !Gemfile
 !package.json
 !setup.sh
+!extractcss.sh
 !.puppeteer.json
 !README.md
