@@ -14,5 +14,15 @@ yum install google-chrome-stable_current_x86_64.rpm
 # pandoc filters
 npm install --global mermaid-filter
 
+#
+style=${1:-pygments}
+tmp=
+trap 'rm -f "$tmp"' EXIT
+tmp=$(mktemp)
+echo '$highlighting-css$' > "$tmp"
+echo '`test`{.c}' | pandoc --highlight-style=$style --template=$tmp
+
+ls -la
+
 echo "Which chrome -> $(which google-chrome)"
 echo "### Done."

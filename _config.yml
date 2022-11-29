@@ -9,7 +9,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-optional-front-matter
   - jekyll-pandoc
-markdown: Pandoc
+markdown: pandoc
 theme: jekyll-theme-primer
 # The GitHub repository that we are hosting our foam workspace from
 repository: serranomorante/foam
@@ -18,6 +18,5 @@ permalink: pretty
 pandoc:
   extensions:
     - mathjax
-    - to: gfm
     - filter: mermaid-filter
     - bibliography: public/myrefs.bib
