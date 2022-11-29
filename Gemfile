@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 gem "jekyll"
-gem "kramdown-parser-gfm"
 gem "jekyll-theme-primer"
 gem "jekyll-optional-front-matter"
 gem "jekyll-default-layout"
