@@ -45,7 +45,9 @@ $$
 
 ## Citations
 
-This is taken from that excellent book [@citationDummyKey]
+This is taken from that excellent book [@serranoMisMemorias2016]
+
+And also [@monitoTransferenciasInternacionalesCon]
 
 ## Table
 
