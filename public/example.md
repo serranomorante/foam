@@ -1,5 +1,5 @@
 ---
-bibliography: [myrefs.public.bib]
+bibliography: [../myrefs.public.bib]
 ---
 
 # Example

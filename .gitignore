@@ -18,7 +18,9 @@
 !setup.sh
 !extractcss.sh
 !.puppeteer.json
-!/README.md
+# README files will always be public no matter if they have
+# the `.public.md` or not.
+!README.md
 !*.public.bib
 
 *.plist
