@@ -19,4 +19,4 @@ pandoc:
   extensions:
     - mathjax
     - filter: mermaid-filter
-    - bibliography: public/myrefs.bib
+    - bibliography: myrefs.public.bib

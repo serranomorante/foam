@@ -3,6 +3,8 @@
 
 !*/
 
+!/public/**/*
+
 !_layouts/*
 
 !assets/css/*
@@ -16,3 +18,4 @@
 !extractcss.sh
 !.puppeteer.json
 !/README.md
+!*.public.bib
