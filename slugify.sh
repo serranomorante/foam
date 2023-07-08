@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/sh
+
 #: Name        : slugify
 #: Date        : 2012-05-01
 #: Author      : "Benjamin Linton" <developer@benlinton.com>

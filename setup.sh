@@ -15,11 +15,13 @@ yum install google-chrome-stable_current_x86_64.rpm
 npm install --global mermaid-filter
 
 # syntax highlighting
+sed -i 's/\r$//g' ./extractcss.sh
 chmod +x ./extractcss.sh
 ./extractcss.sh pygments > ./assets/css/pygments.css
 
-# slugify filenames (remove empty spaces)
+# slugify urls
+sed -i 's/\r$//g' ./slugify.sh
 chmod +x ./slugify.sh
-find . -type f -name "*.md" -exec ./slugify.sh -i -d {} \;
+find . -type f -name "*.md" -exec ./slugify.sh -v -i -d {} \;
 
 echo "### Done."
