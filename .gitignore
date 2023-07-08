@@ -19,3 +19,5 @@
 !.puppeteer.json
 !/README.md
 !*.public.bib
+
+*.plist
