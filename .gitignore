@@ -23,3 +23,6 @@
 
 *.plist
 _site
+.jekyll-cache
+.vscode
+.foam

@@ -1,6 +1,6 @@
 # Setting name and title fixes duplicated header issue
 name: serranomorante
-title: null
+title: foam - serranomorante
 plugins:
   - jekyll-katex
   - jekyll-default-layout
