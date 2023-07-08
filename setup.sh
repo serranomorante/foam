@@ -18,4 +18,8 @@ npm install --global mermaid-filter
 chmod +x ./extractcss.sh
 ./extractcss.sh pygments > ./assets/css/pygments.css
 
+# slugify filenames (remove empty spaces)
+chmod +x ./slugify.sh
+find . -type f -name "*.md" -exec ./slugify.sh -i -d {} \;
+
 echo "### Done."
