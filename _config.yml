@@ -20,3 +20,8 @@ pandoc:
     - mathjax
     - filter: mermaid-filter
     - bibliography: myrefs.public.bib
+katex:
+  rendering_options:
+    # Default KaTeX rendering options. See https://github.com/Khan/KaTeX#rendering-options
+    # Do not throw error at build but when rendering
+    throw_error: false
