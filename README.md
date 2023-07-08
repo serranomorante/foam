@@ -6,7 +6,7 @@ My personal notes online
 
 Recent changes
 
-- New post: [Optimus manager and nvidia](https://foam.serranomorante.com/misc/arch/nvidia.public)
+- New post: [Optimus manager and nvidia](misc/arch/nvidia.public)
 
 ## Testing
 
