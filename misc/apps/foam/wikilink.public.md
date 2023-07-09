@@ -1,3 +1,0 @@
-# wikilink
-
-Don't panic!
