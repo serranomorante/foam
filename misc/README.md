@@ -4,5 +4,5 @@ Section for miscellaneous content.
 
 ## Index
 
-- [apps](apps) all my app related configurations
-- [arch](arch) all my arch related setup
+- [apps](./apps/README.md) all my app related configurations
+- [arch](./arch/README.md) all my arch related setup

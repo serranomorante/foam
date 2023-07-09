@@ -1,3 +1,3 @@
 # App
 
-- [foam](foam) all about my foam implementation
+- [foam](./foam/README.md) all about my foam implementation
