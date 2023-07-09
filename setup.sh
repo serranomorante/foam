@@ -26,4 +26,7 @@ sed -i 's/\r$//g' ./slugify.sh
 chmod +x ./slugify.sh
 find . -type f -name "*.md" -exec ./slugify.sh -i -d {} \;
 
+# Fixes wikilinks from foam
+grep -rli '\(^\[[^]]\+\]:\s<\?\)\([^ ]\+\)\s\([^"]\)' * | xargs -i@  sed -e ':loop' -e 's/\(^\[[^]]\+\]:\s<\?\)\([^ ]\+\)\s\([^"]\)/\1\2-\3/' -e 't loop' -i @
+
 echo "### Done."
