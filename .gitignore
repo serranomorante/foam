@@ -8,6 +8,8 @@
 
 !_layouts/*
 
+!_includes/*
+
 !assets/css/*
 
 !*.public.md
