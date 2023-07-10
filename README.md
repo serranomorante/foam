@@ -10,11 +10,11 @@ My personal notes online
 
 Recent changes
 
-- New post: [Optimus manager and nvidia](misc/arch/nvidia.public)
+- New post: [Optimus manager and nvidia](misc/arch/nvidia.public.md)
 
 ## Testing
 
 Just for testing new features
 
-- [root-test](https://foam.serranomorante.com/public/root-test)
-- [example](https://foam.serranomorante.com/public/example)
+- [root-test](./public/root-test.md)
+- [example](./public/example.md)
