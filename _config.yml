@@ -8,6 +8,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-optional-front-matter
   - jekyll-pandoc
+  - jekyll-relative-links
 markdown: Pandoc
 theme: jekyll-theme-primer
 # The GitHub repository that we are hosting our foam workspace from
