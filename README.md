@@ -2,6 +2,10 @@
 
 My personal notes online
 
+## Index
+
+- [Misc](./misc/README.md) - Miscellaneous notes
+
 ## Changelog
 
 Recent changes
